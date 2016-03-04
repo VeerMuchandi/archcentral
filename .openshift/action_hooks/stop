@@ -1,0 +1,5 @@
+#!/bin/bash  
+  
+jps | grep jboss-modules.jar | cut -d ' ' -f 1 | xargs kill  
+  
+exit 0  

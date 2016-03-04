@@ -1,0 +1,6 @@
+#!/bin/bash  
+  
+ln -s $OPENSHIFT_DATA_DIR $OPENSHIFT_REPO_DIR/wildfly-8.0.0.Beta1/standalone/data  
+  
+cd $OPENSHIFT_REPO_DIR/wildfly-8.0.0.Beta1  
+nohup bin/standalone.sh -b $OPENSHIFT_DIY_IP -bmanagement=$OPENSHIFT_DIY_IP > $OPENSHIFT_DIY_DIR/logs/server.log 2>&1 &  
